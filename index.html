@@ -1,0 +1,333 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="StyleSheet1.css"/>
+</head>
+<body>
+    <h1> Unjust Minority Group Crimes in the United States </h1>
+    <h2> Section III: Findings </h2>
+
+    <h3> Year 1: January 2020 to January 2021 </h3>
+
+    <img id="Year1Graphs" class="Image" src="Y1Graph1.png">  <!-- Add Image Here --> <!-- Starts with table 1 -->
+    <p id="StatTitle1" class="StatTitles"> Graph 1.1: Hate Crime Reports in US in Year 1 </p> <!-- Add Graph Name Here --> <!-- Starts with stats from table 1 -->
+    <p id="StatDesc1" class="StatDescs"> Graph 1.1 shows US Hate Crimes in Year 1 offenses (13,771) were higher than incidents (10,700). The highest peak for both occurred in June ( 2,628 offenses; 1,444 incidents), while its lowest occurred in April (595 offenses; 497 incidents). After that, the numbers showed smaller fluctuations for the rest of the year. </p> <!-- Add Graph Description Here -->
+    <div class="flex-parent jc-center">
+        <button class="BackButtons" onclick="ImageRevertY1()"> Back </button>  <!-- Calls button switch function for going back to images -->
+        <button class="NextButtons" onclick="ImageSwitchY1()"> Next </button>  <!-- Calls button switch function -->
+    </div>
+    
+
+
+    <h3> Year 2: January 2021 to January 2022 </h3>
+
+    <img id="Year2Graphs" class="Image" src="Y2Graph1.png">  <!-- Add Image Here --> <!-- Starts with table 1 -->
+    <p id="StatTitle2" class="StatTitles"> Graph 2.1: Hate Crime Reports in United States in Year 2 </p> <!-- Add Graph Name Here --> <!-- Starts with stats from table 1 -->
+    <p id="StatDesc2" class="StatDescs"> Graph 2.1 portrays the gradual fluctuation of US Hate Crimes in Year 2 (offenses: 13,931; incidents: 11,810) throughout the year. Both offenses and incidents rose steadily from February (739 offenses; 632 incidents), to its highest peak in June (1,370 offenses; 1,128 incidents), before gradually fluctuating moderately for the remainder of the year. </p> <!-- Add Graph Description Here -->
+    <div class="flex-parent jc-center">
+        <button class="BackButtons" onclick="ImageRevertY2()"> Back </button>  <!-- Calls button switch function for going back to images -->
+        <button class="NextButtons" onclick="ImageSwitchY2()"> Next </button>  <!-- Calls button switch function -->
+    </div>
+   
+
+
+    <h3> Year 3: January 2022 to January 2023 </h3>
+
+    <img id="Year3Graphs" class="Image" src="Y3Graph1.png">  <!-- Add Image Here --> <!-- Starts with table 1 -->
+    <p id="StatTitle3" class="StatTitles"> Graph 3.1: Hate Crime Reports in United States in Year 3 </p> <!-- Add Graph Name Here --> <!-- Starts with stats from table 1 -->
+    <p id="StatDesc3" class="StatDescs"> Another increase in crime rates has been seen in Year 3 (offenses: 14,952; incidents 12,755). Both rose steadily from January (883 offenses; 740 incidents) to their highest peaks around May–June (1,427 offenses in May; 1,198 incidents in June), before gradually declining for the remainder of the year. </p> <!-- Add Graph Description Here -->
+    <div class="flex-parent jc-center">
+        <button class="BackButtons" onclick="ImageRevertY3()"> Back </button>  <!-- Calls button switch function for going back to images -->
+        <button class="NextButtons" onclick="ImageSwitchY3()"> Next </button>  <!-- Calls button switch function -->
+    </div>
+    
+
+
+    <h3> Year 4: January 2023 to January 2024 </h3>
+    <img id="Year4Graphs" class="Image" src="Y4Graph1.png">  <!-- Add Image Here --> <!-- Starts with table 1 -->
+    <p id="StatTitle4" class="StatTitles"> Graph 4.1: Hate Crime Reports in United States in Year 4 </p> <!-- Add Graph Name Here --> <!-- Starts with stats from table 1 -->
+    <p id="StatDesc4" class="StatDescs"> Graph 4.1 presents the fluctuation of crimes in Year 4, with offenses totaling 15,280 and incidents 12,977 over the period. Both of which increased from January (1,001 offenses; 838 incidents) to a mid-year peak around June (1,296 offenses; 1,080 incidents), before dipping slightly in the following months. After that, both series surged sharply to their highest point in October (1,556 offenses; 1,328 incidents), before declining again toward the end of the year. </p> <!-- Add Graph Description Here -->
+    <div class="flex-parent jc-center">
+        <button class="BackButtons" onclick="ImageRevertY4()"> Back </button>  <!-- Calls button switch function for going back to images -->
+        <button class="NextButtons" onclick="ImageSwitchY4()"> Next </button>  <!-- Calls button switch function -->
+    </div>
+    
+
+
+    <h3> Year 5: January 2024 to January 2025 </h3>
+    <img id="Year5Graphs" class="Image" src="Y5Graph1.png">  <!-- Add Image Here --> <!-- Starts with table 1 -->
+    <p id="StatTitle5" class="StatTitles"> Graph 5.1: Hate Crime Reports in United States in Year 5 </p> <!-- Add Graph Name Here --> <!-- Starts with stats from table 1 -->
+    <p id="StatDesc5" class="StatDescs"> Graph 5.1 shows that Year 5 has a total offense of 14,870 and incidents of 12,712. Both have risen steadily from January (967 offenses; 823 incidents) to a mid-year peak in June (1,377 offenses; 1,167 incidents), followed by a secondary peak around October (1,311 offenses; 1,129 incidents). The lowest counts are recorded at the end of the period (January 2025: 927 offenses; 484 incidents). </p> <!-- Add Graph Description Here -->
+    <div class="flex-parent jc-center">
+        <button class="BackButtons" onclick="ImageRevertY5()"> Back </button>  <!-- Calls button switch function for going back to images -->
+        <button class="NextButtons" onclick="ImageSwitchY5()"> Next </button>  <!-- Calls button switch function -->
+    </div>
+    
+
+    <script>
+
+        function ImageSwitchY1() {
+            let displayImage = document.getElementById('Year1Graphs')
+            if (displayImage.src.match('Y1Graph1.png')) {
+                displayImage.src = 'Y1Graph2.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.2: Offenders of US Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "There are a total of 9,075 offenders in Year 1, with Whites doing the most crimes, followed by Blacks."
+            } else if (displayImage.src.match('Y1Graph2.png')) {
+                displayImage.src = 'Y1Graph3.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.3: Bias Categories Affected by United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "Amounting up to 11,154 minorities, Race has been shown to be the most affected, followed by Religion, and Sexual Orientation."
+            } else if (displayImage.src.match('Y1Graph3.png')) {
+                displayImage.src = 'Y1Graph4.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.4: Offense Types in United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "A total of 14,428 offense types have been reported in Year 1, with one or more being inflicted on one victim. The most prevalent offense used is Intimidation (5859 reports), then Property Damage (2,955 reports), and Single Assault (2,511 reports."
+            } else if (displayImage.src.match('Y1Graph4.png')) {
+                displayImage.src = 'Y1Graph5.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.5: Top 5 Locations of  United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "As shown above, crimes mostly happen in Residence homes (3,265 reports) is the most common location of crimes, followed by Roadways (2,107 reports), then Unknown (1,161 reports)."
+            } else if (displayImage.src.match('Y1Graph5.png')) {
+                displayImage.src = 'Y1Graph1.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.1: Hate Crime Reports in US in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "Graph 1.1 shows US Hate Crimes in Year 1 offenses (13,771) were higher than incidents (10,700). The highest peak for both occurred in June ( 2,628 offenses; 1,444 incidents), while its lowest occurred in April (595 offenses; 497 incidents). After that, the numbers showed smaller fluctuations for the rest of the year."
+            }
+
+        }
+
+        function ImageRevertY1() {
+            let displayImage = document.getElementById('Year1Graphs')
+            if (displayImage.src.match('Y1Graph1.png')) {
+                displayImage.src = 'Y1Graph5.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.5: Top 5 Locations of  United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "As shown above, crimes mostly happen in Residence homes (3,265 reports) is the most common location of crimes, followed by Roadways (2,107 reports), then Unknown (1,161 reports)."
+            } else if (displayImage.src.match('Y1Graph2.png')) {
+                displayImage.src = 'Y1Graph1.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.1: Hate Crime Reports in US in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "Graph 1.1 shows US Hate Crimes in Year 1 offenses (13,771) were higher than incidents (10,700). The highest peak for both occurred in June ( 2,628 offenses; 1,444 incidents), while its lowest occurred in April (595 offenses; 497 incidents). After that, the numbers showed smaller fluctuations for the rest of the year. "
+            } else if (displayImage.src.match('Y1Graph3.png')) {
+                displayImage.src = 'Y1Graph2.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.2: Offenders of US Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "There are a total of 9,075 offenders in Year 1, with Whites doing the most crimes, followed by Blacks."
+            } else if (displayImage.src.match('Y1Graph4.png')) {
+                displayImage.src = 'Y1Graph3.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.3: Bias Categories Affected by United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "Amounting up to 11,154 minorities, Race has been shown to be the most affected, followed by Religion, and Sexual Orientation."
+            } else if (displayImage.src.match('Y1Graph5.png')) {
+                displayImage.src = 'Y1Graph4.png'
+                document.getElementById("StatTitle1").innerHTML = "Graph 1.4: Offense Types in United States’ Hate Crimes in Year 1"
+                document.getElementById("StatDesc1").innerHTML = "A total of 14,428 offense types have been reported in Year 1, with one or more being inflicted on one victim. The most prevalent offense used is Intimidation (5859 reports), then Property Damage (2,955 reports), and Single Assault (2,511 reports."
+            }
+        }
+
+        function ImageSwitchY2() {
+            let displayImage = document.getElementById('Year2Graphs')
+            if (displayImage.src.match('Y2Graph1.png')) {
+                displayImage.src = 'Y2Graph2.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.2: Offenders of United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Higher than Year 1, Year 2 shows an amount of 10,840 offenders of the crime, with Whites being the majority of it, followed by Blacks."
+            } else if (displayImage.src.match('Y2Graph2.png')) {
+                displayImage.src = 'Y2Graph3.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.3: Bias Categories Affected by United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Similarly, minorities affected in Year 2 are higher than Year 1 (11,154 to 12,202). Race remains the minority group mostly affected, followed by Sexual Orientation, and Religion."
+            } else if (displayImage.src.match('Y2Graph3.png')) {
+                displayImage.src = 'Y2Graph4.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.4: Offense Types in United States’ Hate Crimes in Year 2 "
+                document.getElementById("StatDesc2").innerHTML = "In Year 2, Intimidation (4,352 reports) is still the most used offense type, however, it’s now followed by Simple Assault (3,369 reports), then Property Damage (1,931 reports)."
+            } else if (displayImage.src.match('Y2Graph4.png')) {
+                displayImage.src = 'Y2Graph5.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.5: Top 5 Locations of United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Residence homes (3,459 reports) still remained as the top crime location, followed by Roadways (2,094 reports) and Unknown (1,198)."
+            } else if (displayImage.src.match('Y2Graph5.png')) {
+                displayImage.src = 'Y2Graph1.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.1: Hate Crime Reports in United States in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Graph 2.1 portrays the gradual fluctuation of US Hate Crimes in Year 2 (offenses: 13,931; incidents: 11,810) throughout the year. Both offenses and incidents rose steadily from February (739 offenses; 632 incidents), to its highest peak in June (1,370 offenses; 1,128 incidents), before gradually fluctuating moderately for the remainder of the year."
+            }
+
+        }
+
+        function ImageRevertY2() {
+            let displayImage = document.getElementById('Year2Graphs')
+            if (displayImage.src.match('Y2Graph1.png')) {
+                displayImage.src = 'Y2Graph5.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.5: Top 5 Locations of United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Residence homes (3,459 reports) still remained as the top crime location, followed by Roadways (2,094 reports) and Unknown (1,198)."
+            } else if (displayImage.src.match('Y2Graph2.png')) {
+                displayImage.src = 'Y2Graph1.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.1: Hate Crime Reports in United States in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Graph 2.1: portrays the gradual fluctuation of US Hate Crimes in Year 2 (offenses: 13,931; incidents: 11,810) throughout the year. Both offenses and incidents rose steadily from February (739 offenses; 632 incidents), to its highest peak in June (1,370 offenses; 1,128 incidents), before gradually fluctuating moderately for the remainder of the year."
+            } else if (displayImage.src.match('Y2Graph3.png')) {
+                displayImage.src = 'Y2Graph2.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.2: Offenders of United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Higher than Year 1, Year 2 shows an amount of 10,840 offenders of the crime, with Whites being the majority of it, followed by Blacks."
+            } else if (displayImage.src.match('Y2Graph4.png')) {
+                displayImage.src = 'Y2Graph3.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.3: Bias Categories Affected by United States’ Hate Crimes in Year 2"
+                document.getElementById("StatDesc2").innerHTML = "Similarly, minorities affected in Year 2 are higher than Year 1 (11,154 to 12,202). Race remains the minority group mostly affected, followed by Sexual Orientation, and Religion."
+            } else if (displayImage.src.match('Y2Graph5.png')) {
+                displayImage.src = 'Y2Graph4.png'
+                document.getElementById("StatTitle2").innerHTML = "Graph 2.4: Offense Types in United States’ Hate Crimes in Year 2 "
+                document.getElementById("StatDesc2").innerHTML = "In Year 2, Intimidation (4,352 reports) is still the most used offense type, however, it’s now followed by Simple Assault (3,369 reports), then Property Damage (1,931 reports)."
+            }
+        }
+
+        function ImageSwitchY3() {
+            let displayImage = document.getElementById('Year3Graphs')
+            if (displayImage.src.match('Y3Graph1.png')) {
+                displayImage.src = 'Y3Graph2.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.2: Offenders of United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Year 3 shows an increase in offenders (11,620), with Whites being the majority of it, followed by Blacks."
+            } else if (displayImage.src.match('Y3Graph2.png')) {
+                displayImage.src = 'Y3Graph3.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.3: Bias Categories Affected by United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Another increase has been observed in Year 3 (13,220 minorities), with Race, still being consistent as the most affected, followed by Religion, and Sexual Orientation."
+            } else if (displayImage.src.match('Y3Graph3.png')) {
+                displayImage.src = 'Y3Graph4.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.4: Offense Types in United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "A sudden surge of reported offense types has been observed in Year 3 (15,438). Intimidation (4,838 reports) remains the highest offense type reported, followed by Property Damage and Single Assault, which almost have an equal reports during this period (3,588; 3,574 reports)."
+            } else if (displayImage.src.match('Y3Graph4.png')) {
+                displayImage.src = 'Y3Graph5.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.5: Top 5 Locations of United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Ordinarily,  residence homes (3,476 reports) are still the most common location of US Hate Crimes, followed by roadways (2,051 reports) and unknown (1,226)."
+            } else if (displayImage.src.match('Y3Graph5.png')) {
+                displayImage.src = 'Y3Graph1.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.1: Hate Crime Reports in United States in Year 3 "
+                document.getElementById("StatDesc3").innerHTML = "Another increase in crime rates has been seen in Year 3 (offenses: 14,952; incidents 12,755). Both rose steadily from January (883 offenses; 740 incidents) to their highest peaks around May–June (1,427 offenses in May; 1,198 incidents in June), before gradually declining for the remainder of the year."
+            }
+
+        }
+
+        function ImageRevertY3() {
+            let displayImage = document.getElementById('Year3Graphs')
+            if (displayImage.src.match('Y3Graph1.png')) {
+                displayImage.src = 'Y3Graph5.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.5: Top 5 Locations of United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Ordinarily,  residence homes (3,476 reports) are still the most common location of US Hate Crimes, followed by roadways (2,051 reports) and unknown (1,226)."
+            } else if (displayImage.src.match('Y3Graph2.png')) {
+                displayImage.src = 'Y3Graph1.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.1: Hate Crime Reports in United States in Year 3 "
+                document.getElementById("StatDesc3").innerHTML = "Another increase in crime rates has been seen in Year 3 (offenses: 14,952; incidents 12,755). Both rose steadily from January (883 offenses; 740 incidents) to their highest peaks around May–June (1,427 offenses in May; 1,198 incidents in June), before gradually declining for the remainder of the year."
+            } else if (displayImage.src.match('Y3Graph3.png')) {
+                displayImage.src = 'Y3Graph2.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.2: Offenders of United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Year 3 shows an increase in offenders (11,620), with Whites being the majority of it, followed by Blacks."
+            } else if (displayImage.src.match('Y3Graph4.png')) {
+                displayImage.src = 'Y3Graph3.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.3: Bias Categories Affected by United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "Another increase has been observed in Year 3 (13,220 minorities), with Race, still being consistent as the most affected, followed by Religion, and Sexual Orientation."
+            } else if (displayImage.src.match('Y3Graph5.png')) {
+                displayImage.src = 'Y3Graph4.png'
+                document.getElementById("StatTitle3").innerHTML = "Graph 3.4: Offense Types in United States’ Hate Crimes in Year 3"
+                document.getElementById("StatDesc3").innerHTML = "A sudden surge of reported offense types has been observed in Year 3 (15,438). Intimidation (4,838 reports) remains the highest offense type reported, followed by Property Damage and Single Assault, which almost have an equal reports during this period (3,588; 3,574 reports)."
+            }
+        }
+
+        function ImageSwitchY4() {
+            let displayImage = document.getElementById('Year4Graphs')
+            if (displayImage.src.match('Y4Graph1.png')) {
+                displayImage.src = 'Y4Graph2.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.2: Offenders of United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "Interestingly, a slight decrease among offenders have been observed in Year 4 (11,242 offenders), however, Whites are still the most offenders ofthe crime, followed by Unknown, and Blacks."
+            } else if (displayImage.src.match('Y4Graph2.png')) {
+                displayImage.src = 'Y4Graph3.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.3: Bias Categories Affected by United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "With a total of 13,541 minorities affected in Year 4, the most affected minority group is still Race, followed again by Religion, and Sexual Orientation"
+            } else if (displayImage.src.match('Y4Graph3.png')) {
+                displayImage.src = 'Y4Graph4.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.4: Offense Types in United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "In Year 4 (15,913 reports), intimidation (5,198 reports) is still on top of the offense types, with Property Damage (3,859 reports) and Simple Assault (3,360 reports) remained being subsequent to it."
+            } else if (displayImage.src.match('Y4Graph4.png')) {
+                displayImage.src = 'Y4Graph5.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.5: Top 5 Locations of United States’ Hate Crimes in Year 4 "
+                document.getElementById("StatDesc4").innerHTML = "Year 4 shows that Residence Homes (3,505 reports) are still on top, following roadways (2,266 reports), but interestingly, school (1,071 reports) has risen up as one of the crimes’ top locations."
+            } else if (displayImage.src.match('Y4Graph5.png')) {
+                displayImage.src = 'Y4Graph1.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.1: Hate Crime Reports in United States in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "Graph 4.1 presents the fluctuation of crimes in Year 4, with offenses totaling 15,280 and incidents 12,977 over the period. Both of which increased from January (1,001 offenses; 838 incidents) to a mid-year peak around June (1,296 offenses; 1,080 incidents), before dipping slightly in the following months. After that, both series surged sharply to their highest point in October (1,556 offenses; 1,328 incidents), before declining again toward the end of the year."
+            }
+
+        }
+
+        function ImageRevertY4() {
+            let displayImage = document.getElementById('Year4Graphs')
+            if (displayImage.src.match('Y4Graph1.png')) {
+                displayImage.src = 'Y4Graph5.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.5: Top 5 Locations of United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "Year 4 shows that Residence Homes (3,505 reports) are still on top, following roadways (2,266 reports), but interestingly, school (1,071 reports) has risen up as one of the crimes’ top locations."
+            } else if (displayImage.src.match('Y4Graph2.png')) {
+                displayImage.src = 'Y4Graph1.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.1: Hate Crime Reports in United States in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "Graph 4.1 presents the fluctuation of crimes in Year 4, with offenses totaling 15,280 and incidents 12,977 over the period. Both of which increased from January (1,001 offenses; 838 incidents) to a mid-year peak around June (1,296 offenses; 1,080 incidents), before dipping slightly in the following months. After that, both series surged sharply to their highest point in October (1,556 offenses; 1,328 incidents), before declining again toward the end of the year."
+            } else if (displayImage.src.match('Y4Graph3.png')) {
+                displayImage.src = 'Y4Graph2.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.2: Offenders of United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "Interestingly, a slight decrease among offenders have been observed in Year 4 (11,242 offenders), however, Whites are still the most offenders ofthe crime, followed by Unknown, and Blacks."
+            } else if (displayImage.src.match('Y4Graph4.png')) {
+                displayImage.src = 'Y4Graph3.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.3: Bias Categories Affected by United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "With a total of 13,541 minorities affected in Year 4, the most affected minority group is still Race, followed again by Religion, and Sexual Orientation"
+            } else if (displayImage.src.match('Y4Graph5.png')) {
+                displayImage.src = 'Y4Graph4.png'
+                document.getElementById("StatTitle4").innerHTML = "Graph 4.4: Offense Types in United States’ Hate Crimes in Year 4"
+                document.getElementById("StatDesc4").innerHTML = "In Year 4 (15,913 reports), intimidation (5,198 reports) is still on top of the offense types, with Property Damage (3,859 reports) and Simple Assault (3,360 reports) remained being subsequent to it."
+            }
+        }
+
+        function ImageSwitchY5() {
+            let displayImage = document.getElementById('Year5Graphs')
+            if (displayImage.src.match('Y5Graph1.png')) {
+                displayImage.src = 'Y5Graph2.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.2: Offenders of United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Another slight increase on the offenders are observed in Year 5 (11,371 offenders), with Whites still being on top, followed by Blacks."
+            } else if (displayImage.src.match('Y5Graph2.png')) {
+                displayImage.src = 'Y5Graph3.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.3: Bias Categories Affected by  United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Interestingly, a small decrease in the total of minorities affected is observed in Year 5 (13,167 minorities). Race is still the most affected minority group, followed by Religion, and a slight decrease in Sexual Orientation."
+            } else if (displayImage.src.match('Y5Graph3.png')) {
+                displayImage.src = 'Y5Graph4.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.4: Offense Types in United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Year 5 (15,417 reports) shows that the most common offense type of this crime is still intimidation (4,874 reports), followed by Property Damage (3,711 reports), then Simple Assault (3,325 reports)."
+            } else if (displayImage.src.match('Y5Graph4.png')) {
+                displayImage.src = 'Y5Graph5.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.5: Top 5 Locations of United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Despite a decrease in Year 5’s location reports (13,197), the most common location is still Residence Homes (3,485 reports), followed by Roadways (2,467 reports), then School (956 reports)."
+            } else if (displayImage.src.match('Y5Graph5.png')) {
+                displayImage.src = 'Y5Graph1.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.1: Hate Crime Reports in United States in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Graph 5.1 shows that Year 5 has a total offense of 14,870 and incidents of 12,712. Both have risen steadily from January (967 offenses; 823 incidents) to a mid-year peak in June (1,377 offenses; 1,167 incidents), followed by a secondary peak around October (1,311 offenses; 1,129 incidents). The lowest counts are recorded at the end of the period (January 2025: 927 offenses; 484 incidents)."
+            }
+
+        }
+
+        function ImageRevertY5() {
+            let displayImage = document.getElementById('Year5Graphs')
+            if (displayImage.src.match('Y5Graph1.png')) {
+                displayImage.src = 'Y5Graph5.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.5: Top 5 Locations of United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Despite a decrease in Year 5’s location reports (13,197), the most common location is still Residence Homes (3,485 reports), followed by Roadways (2,467 reports), then School (956 reports)."
+            } else if (displayImage.src.match('Y5Graph2.png')) {
+                displayImage.src = 'Y5Graph1.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.1: Hate Crime Reports in United States in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Graph 5.1 shows that Year 5 has a total offense of 14,870 and incidents of 12,712. Both have risen steadily from January (967 offenses; 823 incidents) to a mid-year peak in June (1,377 offenses; 1,167 incidents), followed by a secondary peak around October (1,311 offenses; 1,129 incidents). The lowest counts are recorded at the end of the period (January 2025: 927 offenses; 484 incidents)."
+            } else if (displayImage.src.match('Y5Graph3.png')) {
+                displayImage.src = 'Y5Graph2.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.2: Offenders of United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Another slight increase on the offenders are observed in Year 5 (11,371 offenders), with Whites still being on top, followed by Blacks."
+            } else if (displayImage.src.match('Y5Graph4.png')) {
+                displayImage.src = 'Y5Graph3.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.3: Bias Categories Affected by  United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Interestingly, a small decrease in the total of minorities affected is observed in Year 5 (13,167 minorities). Race is still the most affected minority group, followed by Religion, and a slight decrease in Sexual Orientation."
+            } else if (displayImage.src.match('Y5Graph5.png')) {
+                displayImage.src = 'Y5Graph4.png'
+                document.getElementById("StatTitle5").innerHTML = "Graph 5.4: Offense Types in United States’ Hate Crimes in Year 5"
+                document.getElementById("StatDesc5").innerHTML = "Year 5 (15,417 reports) shows that the most common offense type of this crime is still intimidation (4,874 reports), followed by Property Damage (3,711 reports), then Simple Assault (3,325 reports)."
+            }
+        }
+
+
+    </script>
+</body>
+
+
+
+</html>
